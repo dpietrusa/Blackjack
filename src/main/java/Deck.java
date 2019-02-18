@@ -7,7 +7,8 @@ public class Deck {
 
     String[] rank = {"2", "3", "4", "5", "6", "7", "8", "9", "10", "Jack", "Queen", "King", "Ace"};
 
-    ArrayList<String> deckArray = new ArrayList<>();
+    ArrayList<Card> deckArray = new ArrayList<>();
+
 
 
     public void generateDeck() {
@@ -16,8 +17,9 @@ public class Deck {
 
             for (int b = 0; b < suit.length; b++) {
                 for (int i = 0; i < rank.length; i++) {
-                    String genCard = rank[i] + " of " + suit[b];
-                    deckArray.add(genCard);
+                   // String genCard = rank[i] + " of " + suit[b];
+                    Card newCard = new Card(rank[i], suit[b]);
+                    deckArray.add(newCard);
                     Collections.shuffle(deckArray);
                     Collections.shuffle(deckArray);
                 }
@@ -25,9 +27,13 @@ public class Deck {
         }
     }
 
+
+
+
+
     public void displayDeck() {
         for (int i = 0; i < deckArray.size(); i++)
-            System.out.println(deckArray.get(i));
+            System.out.println(deckArray.get(i).getRank()+deckArray.get(i).getSuit());
     }
 
     public int returnDeckSize() {
