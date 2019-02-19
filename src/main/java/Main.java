@@ -2,11 +2,10 @@ public class Main {
 
     public static void main(String[] args) {
 
-        Deck newDeck = new Deck();
-        newDeck.generateDeck();
-        newDeck.generateNumValueDeck();
-        newDeck.displayDeck();
-      //  newDeck.displayNewDeck();
+    Dealer newDealer = new Dealer();
+    Deck newDeck = new Deck();
+
+    newDealer.setupDeck(newDeck);
 
 
     }

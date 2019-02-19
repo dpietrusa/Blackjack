@@ -18,12 +18,11 @@ public class Deck {
                 for (int i = 0; i < rank.length; i++) {
                     Card newCard = new Card(suit[b], rank[i]);
                     deckArray.add(newCard);
-//                    Collections.shuffle(deckArray);
-//                    Collections.shuffle(deckArray);
+                    Collections.shuffle(deckArray);
+                    Collections.shuffle(deckArray);
                 }
             }
         }
-
     }
 
     public void generateNumValueDeck() {
@@ -55,13 +54,14 @@ public class Deck {
                 deckArray.get(x).setIntRank(10);
             } else if (deckArray.get(x).getRank() == "Ace") {
                 deckArray.get(x).setIntRank(11);
-            }}
-
+            }
+        }
     }
 
     public void displayDeck () {
         for (int i = 0; i < deckArray.size(); i++)
-            System.out.println(deckArray.get(i).getRank() + deckArray.get(i).getSuit() + deckArray.get(i).getIntRank());
+            System.out.println(deckArray.get(i).getRank() + " " + deckArray.get(i).getSuit() + " Value = " +
+                    deckArray.get(i).getIntRank());
     }
 
     public void displayNewDeck () {
