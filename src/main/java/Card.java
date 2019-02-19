@@ -10,6 +10,16 @@ public class Card {
         this.rank = cardRank;
     }
 
+    public Card (int intRank) {
+        this.intRank = intRank;
+    }
+
+    public Card (String cardSuit, String cardRank, int intRank) {
+        this.suit = cardSuit;
+        this.rank = cardRank;
+        this.intRank = intRank;
+    }
+
 
     public int getIntRank() {
         return intRank;

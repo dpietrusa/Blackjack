@@ -4,7 +4,9 @@ public class Main {
 
         Deck newDeck = new Deck();
         newDeck.generateDeck();
+        newDeck.generateNumValueDeck();
         newDeck.displayDeck();
+      //  newDeck.displayNewDeck();
 
 
     }
