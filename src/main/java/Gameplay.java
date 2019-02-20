@@ -46,7 +46,6 @@ public class Gameplay {
                     System.out.println("Current Hand:");
                     int newSum = 0;
 
-
                     for (int i = 0; i < newDealer.playerOne.size(); i++)
                         System.out.println(newDealer.playerOne.get(i).getRank() + " of " + newDealer.playerOne.get(i).getSuit()
                                 + " = " + (newSum += newDealer.playerOne.get(i).getIntRank()));
@@ -69,10 +68,10 @@ public class Gameplay {
 
     public void revealDealerSecondCard() {
 
-        newDealer.addCardToDealerArray();
         System.out.println("\nDealers Hand: \n");
         System.out.println(newDealer.dealer.get(0).getRank() + " of " + newDealer.dealer.get(0).getSuit());
         System.out.println(newDealer.dealer.get(1).getRank() + " of " + newDealer.dealer.get(1).getSuit());
+        System.out.println("Dealers hand totals " + newDealer.sumDealersHand());
 
     }
 
@@ -83,12 +82,13 @@ public class Gameplay {
 //            newSum + newDealer.dealer.get(newDealer.dealer.size()-1).getIntRank();
 //        }
         if (newDealer.sumDealersHand() <= 16) {
-            System.out.println("Dealer's Hand: \n");
+            System.out.println("\nDealer's Hand: \n");
             do {
                 newDealer.addCardToDealerArray();
                 for (int i = 0; i < newDealer.dealer.size(); i++)
-                    System.out.println(newDealer.dealer.get(i).getRank() + " of " + newDealer.dealer.get(i).getSuit() + "\n");
+                    System.out.println(newDealer.dealer.get(i).getRank() + " of " + newDealer.dealer.get(i).getSuit());
             } while (newDealer.sumDealersHand() <= 16);
+            System.out.println("Dealers hand totals " + newDealer.sumDealersHand());
         }
     }
 
