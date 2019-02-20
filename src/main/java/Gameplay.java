@@ -29,6 +29,37 @@ public class Gameplay {
     }
 
     public void hitOrStay () {
+        boolean hitOrStay = true;
+
+        do{
+            System.out.println("How would you like to proceed? \n" +
+                "1) Hit \n" +
+                "2) Stay");
+
+        int userInput = newScanner.nextInt();
+        int handSum = newDealer.sumPlayersHand();
+            System.out.println(handSum);
+
+
+//        if (handSum =<)
+
+            switch (userInput) {
+
+                case 1:
+                    newDealer.addCardToPlayerOneArray();
+                    System.out.println("Current Hand:");
+
+                    for (int i = 0; i < newDealer.playerOne.size(); i++)
+                        System.out.println(newDealer.playerOne.get(i).getRank() + " of " + newDealer.playerOne.get(i).getSuit());
+                    break;
+
+                case 2:
+                    hitOrStay = false;
+                    break;
+            }
+
+        }while (hitOrStay);
+    }
 
 
 
@@ -37,4 +68,4 @@ public class Gameplay {
 
 
 
-}
+

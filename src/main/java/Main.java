@@ -8,7 +8,9 @@ public class Main {
 //    newDealer.addCardToPlayerOneArray();
 
         Gameplay newGameplay = new Gameplay();
+        newGameplay.introPrompt();
         newGameplay.dealCards();
+        newGameplay.hitOrStay();
 
 
 

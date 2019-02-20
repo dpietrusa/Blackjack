@@ -30,6 +30,17 @@ public class Dealer {
 
     }
 
+    public int sumPlayersHand() {
+        int sum = 0;
+        for (Card x: playerOne) {
+            sum += x.getIntRank();
+        }return sum;
+    }
+
+
+
+
+
 }
 
 
