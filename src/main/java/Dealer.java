@@ -37,6 +37,24 @@ public class Dealer {
         }return sum;
     }
 
+    public int sumDealersHand() {
+        int sum = 0;
+        for (Card x: dealer) {
+            sum += x.getIntRank();
+        }return sum;
+    }
+
+    public void checkIfWinner() {
+        int handsum = this.sumPlayersHand();
+        if (handsum == 21) {
+            System.out.println("You Win");
+        } else if (handsum < 21) {
+
+        } else if (handsum > 21) {
+            System.out.println("BUST!");
+        }
+    }
+
 
 
 

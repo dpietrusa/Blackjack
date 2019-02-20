@@ -7,10 +7,13 @@ public class Main {
 //    newDealer.setupDeck();
 //    newDealer.addCardToPlayerOneArray();
 
-        Gameplay newGameplay = new Gameplay();
-        newGameplay.introPrompt();
-        newGameplay.dealCards();
-        newGameplay.hitOrStay();
+        Gameplay newGamePlay = new Gameplay();
+        newGamePlay.introPrompt();
+        newGamePlay.dealCards();
+        newGamePlay.hitOrStay();
+        newGamePlay.revealDealerSecondCard();
+        newGamePlay.dealerPlay();
+        newGamePlay.compareValues();
 
 
 
