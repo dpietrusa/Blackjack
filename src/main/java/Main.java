@@ -5,7 +5,13 @@ public class Main {
     Dealer newDealer = new Dealer();
     Deck newDeck = new Deck();
 
-    newDealer.setupDeck(newDeck);
+
+    newDealer.setupDeck();
+    newDealer.addCardToPlayerOneArray();
+
+ // newDealer.newDealerDeck();
+
+
 
 
     }

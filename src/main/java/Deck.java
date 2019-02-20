@@ -25,6 +25,7 @@ public class Deck {
         }
     }
 
+
     public void generateNumValueDeck() {
 
         for (int x = 0; x < deckArray.size(); x++) {
