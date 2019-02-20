@@ -1,15 +1,16 @@
 public class Main {
 
     public static void main(String[] args) {
+//
+//    Dealer newDealer = new Dealer();
+//    Deck newDeck = new Deck();
+//    newDealer.setupDeck();
+//    newDealer.addCardToPlayerOneArray();
 
-    Dealer newDealer = new Dealer();
-    Deck newDeck = new Deck();
+        Gameplay newGameplay = new Gameplay();
+        newGameplay.dealCards();
 
 
-    newDealer.setupDeck();
-    newDealer.addCardToPlayerOneArray();
-
- // newDealer.newDealerDeck();
 
 
 
