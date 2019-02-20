@@ -76,11 +76,7 @@ public class Gameplay {
     }
 
     public void dealerPlay() {
-//        int newSum;
-//        if (newDealer.sumDealersHand() <= 16) {
-//            newDealer.addCardToDealerArray();
-//            newSum + newDealer.dealer.get(newDealer.dealer.size()-1).getIntRank();
-//        }
+
         if (newDealer.sumDealersHand() <= 16) {
             System.out.println("\nDealer's Hand: \n");
             do {
@@ -94,13 +90,12 @@ public class Gameplay {
 
     public void compareValues() {
         if (newDealer.sumPlayersHand() == 21) {
-            System.out.println("You Win!");
+            System.out.println("\nYOU WIN!\n");
         } else if ((21 - newDealer.sumPlayersHand()) < 21 - newDealer.sumDealersHand()) {
-            System.out.println("You Win!");
+            System.out.println("\nYOU LOSE!\n");
         } else if ((newDealer.sumPlayersHand() < 21) && (newDealer.sumDealersHand() > 21)) {
-            System.out.println("You Win");
-        } else System.out.println("You Lose!");
-
+            System.out.println("\nYOU WIN!\n");
+        } else System.out.println("\nYOU LOSE!\n");
     }
 }
 
